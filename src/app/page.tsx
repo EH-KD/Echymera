@@ -12,7 +12,7 @@ const palette = [
 // TEMPORARY: a design-system check page. Replaced by the real homepage in Step 3.
 export default function Home() {
   return (
-    <main className="container-page flex flex-1 flex-col justify-center gap-16 py-24">
+    <div className="container-page flex flex-col gap-16 pt-32 pb-24">
       <header className="flex flex-col gap-6">
         <p className="eyebrow">{siteConfig.name} / Design system check</p>
         <h1 className="font-display text-display">
@@ -31,6 +31,6 @@ export default function Home() {
           </li>
         ))}
       </ul>
-    </main>
+    </div>
   );
 }

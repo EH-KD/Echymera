@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import { siteConfig } from "@/lib/site";
 
 // Self-hosted fonts: no third-party request at page load, no layout shift.
@@ -58,7 +60,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${instrumentSerif.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-paper focus:px-4 focus:py-2 focus:text-ink"
+        >
+          Skip to content
+        </a>
+        <Navbar />
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }
