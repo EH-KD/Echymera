@@ -22,6 +22,19 @@
 
   /* One shared easing curve so every transition feels the same */
   --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Entrance animation: content rises and fades in (used by the hero) */
+  --animate-rise: rise 1.1s var(--ease-cinematic) both;
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(1.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
 
 /* Fonts reference variables created by next/font in layout.tsx, so they

@@ -14,3 +14,9 @@ At the end of the frontend phase this list drives the backend design
 
 ## SEO
 5. **Per-page/per-project SEO metadata** (title, description, Open Graph image) should be stored with each project and returned by the API for `generateMetadata`.
+
+## Homepage content
+6. **Editable homepage content**: hero headline, description, CTAs and the hero media choice (image or video) currently live in `src/data/home.ts`. An admin should be able to edit them and switch the hero between image and video.
+7. **Remote media hosts**: when media moves to a CDN, its domain must be added to `images.remotePatterns` in `next.config.ts`, or `next/image` will refuse to load it.
+8. **Video posters are mandatory**: every video needs a poster still (shown instantly and used for reduced-motion / data-saver visitors). The upload pipeline should generate or require one.
+9. **Smaller video renditions**: the hero video should have a lighter mobile version. Transcoding belongs to the media pipeline (see item 4).
