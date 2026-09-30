@@ -3,7 +3,8 @@ import type { Project } from "@/types/project";
 /**
  * Mock portfolio data. All clients, people and projects are fictional.
  * Thumbnails and hero images are generated placeholders in /public/media/projects.
- * `gallery` is empty for now and gets filled when we build the case-study page.
+ * Gallery stills are placeholders derived from each thumbnail. Three projects have a
+ * `film` (all point at the same placeholder clip).
  */
 export const projects: Project[] = [
   {
@@ -25,7 +26,29 @@ export const projects: Project[] = [
       src: "/media/projects/northbound.jpg",
       alt: "Pale dawn light behind dark mountain ridges",
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/media/projects/northbound-1.jpg",
+        alt: "Still 1 of 3 from Northbound",
+      },
+      {
+        type: "image",
+        src: "/media/projects/northbound-2.jpg",
+        alt: "Still 2 of 3 from Northbound",
+      },
+      {
+        type: "image",
+        src: "/media/projects/northbound-3.jpg",
+        alt: "Still 3 of 3 from Northbound",
+      },
+    ],
+    film: {
+      type: "video",
+      src: "/media/hero-loop.mp4",
+      poster: "/media/projects/northbound.jpg",
+      alt: "Northbound, full film",
+    },
     services: ["Direction", "Cinematography", "Sound design", "Colour grade"],
     credits: [
       { role: "Director", name: "Ines Marek" },
@@ -54,7 +77,29 @@ export const projects: Project[] = [
       src: "/media/projects/halden-time-remains.jpg",
       alt: "Concentric gold rings on a dark background, like a watch face",
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/media/projects/halden-time-remains-1.jpg",
+        alt: "Still 1 of 3 from Time Remains",
+      },
+      {
+        type: "image",
+        src: "/media/projects/halden-time-remains-2.jpg",
+        alt: "Still 2 of 3 from Time Remains",
+      },
+      {
+        type: "image",
+        src: "/media/projects/halden-time-remains-3.jpg",
+        alt: "Still 3 of 3 from Time Remains",
+      },
+    ],
+    film: {
+      type: "video",
+      src: "/media/hero-loop.mp4",
+      poster: "/media/projects/halden-time-remains.jpg",
+      alt: "Time Remains, full film",
+    },
     services: ["Concept", "Direction", "Macro cinematography", "Post-production"],
     credits: [
       { role: "Director", name: "Ines Marek" },
@@ -83,7 +128,29 @@ export const projects: Project[] = [
       src: "/media/projects/static-bloom.jpg",
       alt: "Soft pink, cyan and violet out-of-focus lights",
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/media/projects/static-bloom-1.jpg",
+        alt: "Still 1 of 3 from Static Bloom",
+      },
+      {
+        type: "image",
+        src: "/media/projects/static-bloom-2.jpg",
+        alt: "Still 2 of 3 from Static Bloom",
+      },
+      {
+        type: "image",
+        src: "/media/projects/static-bloom-3.jpg",
+        alt: "Still 3 of 3 from Static Bloom",
+      },
+    ],
+    film: {
+      type: "video",
+      src: "/media/hero-loop.mp4",
+      poster: "/media/projects/static-bloom.jpg",
+      alt: "Static Bloom, full film",
+    },
     services: ["Direction", "Lighting design", "Editing", "Colour grade"],
     credits: [
       { role: "Director", name: "Tomas Reyes" },
@@ -111,7 +178,23 @@ export const projects: Project[] = [
       src: "/media/projects/the-salt-line.jpg",
       alt: "A lone figure standing on a pale salt flat at sunrise",
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/media/projects/the-salt-line-1.jpg",
+        alt: "Still 1 of 3 from The Salt Line",
+      },
+      {
+        type: "image",
+        src: "/media/projects/the-salt-line-2.jpg",
+        alt: "Still 2 of 3 from The Salt Line",
+      },
+      {
+        type: "image",
+        src: "/media/projects/the-salt-line-3.jpg",
+        alt: "Still 3 of 3 from The Salt Line",
+      },
+    ],
     services: ["Direction", "Cinematography", "Editing", "Sound mix"],
     credits: [
       { role: "Director", name: "Dana Whitfield" },
@@ -139,7 +222,23 @@ export const projects: Project[] = [
       src: "/media/projects/ember-and-oak.jpg",
       alt: "Glowing embers and sparks rising in the dark",
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/media/projects/ember-and-oak-1.jpg",
+        alt: "Still 1 of 3 from Ember & Oak",
+      },
+      {
+        type: "image",
+        src: "/media/projects/ember-and-oak-2.jpg",
+        alt: "Still 2 of 3 from Ember & Oak",
+      },
+      {
+        type: "image",
+        src: "/media/projects/ember-and-oak-3.jpg",
+        alt: "Still 3 of 3 from Ember & Oak",
+      },
+    ],
     services: ["Concept", "Direction", "Food cinematography", "Sound design"],
     credits: [
       { role: "Director", name: "Ines Marek" },
@@ -167,7 +266,23 @@ export const projects: Project[] = [
       src: "/media/projects/voltage-city.jpg",
       alt: "City skyline at night with lit windows and blue glow",
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/media/projects/voltage-city-1.jpg",
+        alt: "Still 1 of 3 from Voltage City",
+      },
+      {
+        type: "image",
+        src: "/media/projects/voltage-city-2.jpg",
+        alt: "Still 2 of 3 from Voltage City",
+      },
+      {
+        type: "image",
+        src: "/media/projects/voltage-city-3.jpg",
+        alt: "Still 3 of 3 from Voltage City",
+      },
+    ],
     services: ["Direction", "Aerial cinematography", "Motion graphics", "Post-production"],
     credits: [
       { role: "Director", name: "Tomas Reyes" },
@@ -194,7 +309,23 @@ export const projects: Project[] = [
       src: "/media/projects/quiet-rooms.jpg",
       alt: "A bright window casting a shaft of light across a dark room",
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/media/projects/quiet-rooms-1.jpg",
+        alt: "Still 1 of 3 from Quiet Rooms",
+      },
+      {
+        type: "image",
+        src: "/media/projects/quiet-rooms-2.jpg",
+        alt: "Still 2 of 3 from Quiet Rooms",
+      },
+      {
+        type: "image",
+        src: "/media/projects/quiet-rooms-3.jpg",
+        alt: "Still 3 of 3 from Quiet Rooms",
+      },
+    ],
     services: ["Direction", "Cinematography", "Editing", "Colour grade"],
     credits: [
       { role: "Director", name: "Ines Marek" },
@@ -222,7 +353,23 @@ export const projects: Project[] = [
       src: "/media/projects/longshore.jpg",
       alt: "Moon reflecting on a dark sea at night",
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "image",
+        src: "/media/projects/longshore-1.jpg",
+        alt: "Still 1 of 3 from Longshore",
+      },
+      {
+        type: "image",
+        src: "/media/projects/longshore-2.jpg",
+        alt: "Still 2 of 3 from Longshore",
+      },
+      {
+        type: "image",
+        src: "/media/projects/longshore-3.jpg",
+        alt: "Still 3 of 3 from Longshore",
+      },
+    ],
     services: ["Direction", "Low-light cinematography", "Sound mix"],
     credits: [
       { role: "Director", name: "Dana Whitfield" },

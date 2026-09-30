@@ -27,3 +27,11 @@ At the end of the frontend phase this list drives the backend design
 12. **Featured selection and order**: homepage "Featured work" shows projects flagged `featured`, in array order. Needs an explicit sort/position field so an admin can control which project leads.
 13. **Thumbnail focal point**: cards crop the same thumbnail at different aspect ratios (4:3, 16:9, 21:9). Each image needs an optional focal point (e.g. `object-position`) so the crop keeps the subject in frame.
 14. **Media relations**: a project owns one thumbnail, one hero (image or video) and an ordered gallery. Media records need alt text, dimensions, type and poster references.
+
+## Work page and case studies
+15. **Lookup by slug**: case-study pages need `GET project by slug` (404 if unknown) as well as list endpoints. Source: `getProjectBySlug` in `src/lib/projects.ts`.
+16. **Related projects**: currently same category first, then others. Should become a server-side query once there are many projects.
+17. **Static generation and revalidation**: project pages are pre-rendered from `generateStaticParams`. When an admin publishes or edits a project, the site needs on-demand revalidation (or ISR) so pages update without a redeploy.
+18. **Film video**: each project may have a `film` (src + poster). Needs streaming-friendly hosting (HLS/adaptive), poster generation, and **captions/subtitles (WebVTT) per film** for accessibility.
+19. **Sitemap and SEO fields**: `sitemap.ts` is built from the project list. Meta description and OG image are currently derived (truncated description, hero image); consider explicit per-project SEO fields.
+20. **Work page filtering**: filtering is client-side over the full list. With many projects it needs server-side filtering (`?category=`), pagination, and shareable filter URLs.

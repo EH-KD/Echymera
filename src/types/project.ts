@@ -1,4 +1,4 @@
-import type { ImageMedia, MediaItem } from "./media";
+import type { ImageMedia, MediaItem, VideoMedia } from "./media";
 
 export const projectCategories = [
   "Film",
@@ -34,6 +34,8 @@ export type Project = {
   thumbnail: ImageMedia;
   /** Top of the case-study page: image or video. */
   hero: MediaItem;
+  /** The full film, played with controls on the case-study page. Optional. */
+  film?: VideoMedia;
   gallery: MediaItem[];
   services: string[];
   credits: Credit[];
